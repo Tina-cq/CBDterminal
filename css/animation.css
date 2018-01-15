@@ -1,0 +1,154 @@
+body{
+    overflow-x: hidden;
+}
+.bannerCont img {
+    margin-bottom: 300px;
+}
+
+.animationBox{
+    width: 376px;
+    height: 240px;
+    position: absolute;
+    left: 50%;
+    margin-left: -188px;
+    top: 55px;
+}
+/*-----------------------------------------------------title02初始状态*/
+.title02{
+    width: 403px;
+    height: 72px;
+    position: absolute;
+    left: 50%;
+    margin-left: -201px;
+    top: 57px;
+    background: url("../images/animation/title02.png") no-repeat;
+    z-index: 1;
+    animation:title02 1s linear;
+    animation-fill-mode: forwards;
+    animation-delay: 1.5s;
+}
+/*-----------------------------------------------------title02运动后状态*/
+@keyframes title02
+{
+    from {opacity: 1;top: 57px;}
+    to {top: 40px;opacity: 0;}
+}
+/*-----------------------------------------------------CBD初始状态*/
+.animationBox .BigC,.animationBox .BigB,.animationBox .BigD{
+    width: 40px;
+    position: absolute;
+    top: 66px;
+    margin-bottom: 0px;
+    z-index: 10;
+}
+.BigC{
+    left: -8px;
+    animation:BigC 1s linear;
+    animation-fill-mode: forwards;
+    animation-delay: 2s;
+}
+.BigB{
+    left: 160px;
+    animation:BigB 1s linear;
+    animation-fill-mode: forwards;
+    animation-delay: 2s;
+}
+.BigD{
+    left:264px;
+    animation:BigD 1s linear;
+    animation-fill-mode: forwards;
+    animation-delay: 2s;
+}
+
+/*--------------------------------------------------CBD放大后的状态*/
+
+@keyframes BigC
+{
+    from {
+        width: 40px;
+        top: 66px;
+        left: -8px;
+    }
+    to {
+        width: 112px;
+        left: 50%;
+        top: 33px;
+        margin-left: -148px;
+    }
+}
+@keyframes BigB
+{
+    from {
+        width: 40px;
+        top: 66px;
+        left: 160px;
+    }
+    to {
+        width: 112px;
+        left: 50%;
+        margin-left: -56px;
+        top: 33px;
+    }
+}
+@keyframes BigD
+{
+    from {
+        width: 40px;
+        top: 66px;
+        left:264px;
+    }
+    to {
+        width: 112px;
+        left: 50%;
+        margin-left: 45px;
+        top: 33px;
+    }
+}
+/*--------------------------------------------------terminal初状态*/
+.terminal{
+    width: 290px;
+    height: 72px;
+    background: url("../images/animation/terminal.png") no-repeat;
+    position: absolute;
+    bottom: -4px;
+    left: 50%;
+    margin-left: -145px;
+    opacity: 0;
+    animation:terminal 0.5s linear;
+    animation-fill-mode: forwards;
+    animation-delay: 3s;
+}
+/*--------------------------------------------------terminal动画状态*/
+@keyframes terminal
+{
+    from {opacity: 0;bottom:-23px;}
+    to {opacity: 1;bottom:-4px;}
+}
+/*--------------------------------------------------gif初状态*/
+.gif{  /*gif  2s 走完*/
+    position: absolute;
+    left: 150px;
+    top: 40%;
+    transform: translate(-50%,-50%);
+    width: 511px;
+    height: 150px;
+    /*background:#0060e3 url("../images/animation/bg.png") no-repeat left center;*/
+    background: -webkit-linear-gradient(to right,rgba(0,96,227,0) 1%, rgba(0,96,227,0.5) 1% , #0060e3, #0060e3, #0060e3, #0060e3, #0060e3 ); /* Safari 5.1 - 6.0 */
+    background: -o-linear-gradient(to right,rgba(0,96,227,0) 1%, rgba(0,96,227,0.5) 1% , #0060e3, #0060e3, #0060e3, #0060e3, #0060e3 ); /* Opera 11.1 - 12.0 */
+    background: -moz-linear-gradient(to right,rgba(0,96,227,0) 1%, rgba(0,96,227,0.5) 1% , #0060e3, #0060e3, #0060e3, #0060e3, #0060e3 ); /* Firefox 3.6 - 15 */
+    background: linear-gradient(to right,rgba(0,96,227,0) 1%, rgba(0,96,227,0.5) 1% , #0060e3, #0060e3, #0060e3, #0060e3, #0060e3 ); /* 标准的语法 */
+    z-index: 20;
+    animation:gif 1.3s linear;
+    animation-fill-mode: forwards;
+}
+/*--------------------------------------------------gif动画状态*/
+@keyframes gif
+{
+    from {left: 150px;}
+    to {left:550px;}
+}
+@keyframes img
+{
+    from {opacity: 1}
+    to {opacity:0}
+}

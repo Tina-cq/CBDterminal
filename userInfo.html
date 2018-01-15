@@ -1,0 +1,364 @@
+﻿<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="css/index.css"/>    
+    <script src="js/jquery-1.8.3.min.js"></script>
+    <script src="js/registration.js"></script>
+</head>
+
+<body>
+<div class="header">
+    <div class="header_left">
+        <span><img src="images/logo.png" alt=""/></span>
+    </div>
+     <div class="header_right">
+
+        <div class="login">
+            <span></span>
+            <!--id="login" -----未登录login按钮 // id="login02" 已登录头像按钮-->
+            <span id="login" style="display: none;">Login</span>
+            <span id="login02" class="userPic"></span>
+        </div>
+    </div>
+    <div class="loginBox clearfix">
+        <!--class="loginBoxCont01" -----未登录状态 // class="loginBoxCont02" 已登录状态-->
+        <div class="loginBoxCont01" style="display: none;">
+            <span class="Indicating"></span>
+            <p>Have an account?</p>
+            <div class="email02">
+                <input class="inputText" type="text" placeholder="Email"/>
+                <a>×</a>
+            </div>
+            <input class="inputText" type="text" placeholder="Password"/>
+            <div>
+                <label class="checkbox"><input type="checkbox"/><i></i><span>Remember me</span></label>
+                <span class="forget">Forgot password?</span>
+            </div>
+
+            <input class="button" type="button" value="Login In"/>
+            <p>New to CBD ?</p>
+            <input class="button" type="button" value="Sign up"/>
+        </div>
+        <div class="loginBoxCont02">
+            <span class="Indicating" style="right: 40px;"></span>
+            <ul class="settings">
+                <li>xxxxdsfsftindjdingdj@qq.com</li>
+                <li>Profile</li>
+                <li>Order</li>
+                <li>Logout</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<div class="wrapper clearfix" style="margin: 50px auto 100px;">
+    <div class="infoList">
+        <div class="userInfo" style="display: none;">
+            <div><img src="images/userImg.png" alt=""/></div> <br/>
+            <span>Justbeing@qq.com</span>
+            <div class="buyServer">Membership Service</div>
+        </div>
+        <div class="userInfo">
+            <div><img src="images/userImg.png" alt=""/></div> <br/>
+            <span style="color: #343434;"><img style="margin-right: 5px;width: 15px;vertical-align: middle;" src="images/zuanshi.png" alt=""/>Justbeing@qq.com </span>
+            <br/>
+            <i style="font-size: 12px;padding: 5px 0;display: inline-block;">Data Due 2018-09-10</i>
+            <div class="buyServer">Renewal</div>
+        </div>
+        <div class="navLeft">
+            <ul>
+                <li onclick="javascript:window.location.href='userInfo.html'"  class="active">userinfo</li>
+                <li onclick="javascript:window.location.href='userheader.html'" >用户头像</li>
+                <li onclick="javascript:window.location.href='orderList.html'" >我的订单</li>
+                <li class="hasUl">
+                    账户安全 <img src="images/navArrow.png" alt=""/>
+                    <ul>
+                        <li onclick="javascript:window.location.href='passwordReset01.html'" >重置密码</li>
+                    </ul>
+                </li>
+
+            </ul>
+        </div>
+    </div>
+    <div class="infoWrap">
+        <div class="userInfoInner">
+            <h5>Account lnformation</h5>
+            <div class="info01">
+                <i class="infoItems">Email</i>
+                <p>zjc0424@qq.com</p>
+
+            </div>
+            <div class="list">
+                <div class="info01">
+                    <i class="infoItems">Password</i>
+                    <p>Click to change</p>
+                    <span class="EditBtn">Edit</span>
+                </div>
+                <div class="editBox">
+                    <i class="editBoxArrow"></i>
+                    <h6></h6>
+                    <ul>
+                        <li>
+                            <span>Current Password</span>
+                            <div><input type="text"/></div>
+                        </li>
+                        <li>
+                            <span>New Password</span>
+                            <div><input type="text"/></div>
+                        </li>
+                        <li>
+                            <span>Retype New Password</span>
+                            <div><input type="text"/></div>
+                        </li>
+                    </ul>
+                    <div class="btn">
+                        <div>
+                            <span>Cancel</span>
+                            <span>Set Password</span>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <p class="Configure">Configure Account Security</p>
+
+            <h5>Profile</h5>
+            <div class="list">
+                <div class="info01">
+                    <i class="infoItems">Name</i>
+                    <p>Kami</p>
+                    <span class="EditBtn">Edit</span>
+                </div>
+                <div class="editBox">
+                    <i class="editBoxArrow"></i>
+                    <h6></h6>
+                    <ul>
+                        <li>
+                            <span>First name</span>
+                            <div><input type="text"/></div>
+                        </li>
+                        <li>
+                            <span>Last name</span>
+                            <div><input type="text"/></div>
+                        </li>
+                    </ul>
+                    <div class="btn">
+                        <div>
+                            <span>Cancel</span>
+                            <span>Save</span>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="list">
+                <div class="info01">
+                    <i class="infoItems">Company</i>
+                    <p></p>
+                    <span class="EditBtn">Edit</span>
+                </div>
+                <div class="editBox">
+                    <i class="editBoxArrow"></i>
+                    <h6></h6>
+                    <ul>
+                        <li>
+                            <span>Company</span>
+                            <div><input type="text"/></div>
+                        </li>
+                    </ul>
+                    <div class="btn">
+                        <div>
+                            <span>Cancel</span>
+                            <span>Save</span>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="list">
+                <div class="info01" id="address">
+                    <i class="infoItems">Address</i>
+                    <p>
+                        <span>A1Address1Address1Address1Address1Adr,</span>
+                        <span>Address line 2,</span>
+                        <span>MiddleMiddleMiddleMiddleMid Fang Bang Rd,</span>
+                        <span>ShanghaiShanghaiShanghaiShanghaiShanghaiShanghaShanghaiShanghaShanghaiShanghaShanghai,</span>
+                        <span>200020001020001020001020001020001010</span>
+
+                    </p>
+                    <span class="EditBtn">Edit</span>
+                </div>
+                <div class="editBox">
+                    <i class="editBoxArrow"></i>
+                    <h6></h6>
+                    <ul>
+                        <li>
+                            <span>Address line 1</span>
+                            <div><input type="text"/></div>
+                        </li>
+                        <li>
+                            <span>Address line 2</span>
+                            <div><input type="text"/></div>
+                        </li>
+                        <li>
+                            <span>City</span>
+                            <div id="city" style="position: relative;">
+                                <input class="city01" type="text"/>
+                                <ul class="city">
+                                    <li class="city01">a1</li>
+                                    <li class="city01">a12</li>
+                                    <li class="city01">a12</li>
+                                    <li class="city01">a12</li>
+                                    <li class="city01">a12</li>
+                                    <li class="city01">a12</li>
+                                    <li class="city01">a12</li>
+                                    <li class="city01">a13</li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li>
+                            <span>Country</span>
+                            <div id="Country" style="position: relative;">
+                                <input class="city02" type="text"/>
+                                <ul class="Country">
+                                    <li class="city02">b1</li>
+                                    <li class="city02">b12</li>
+                                    <li class="city02">b12</li>
+                                    <li class="city02">b12</li>
+                                    <li class="city02">b12</li>
+                                    <li class="city02">b12</li>
+                                    <li class="city02">b12</li>
+                                    <li class="city02">b13</li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li>
+                            <span>Zip/postal code</span>
+                            <div><input type="text"/></div>
+                        </li>
+                    </ul>
+                    <div class="btn">
+                        <div>
+                            <span>Cancel</span>
+                            <span>Save</span>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="list">
+                <div class="info01">
+                    <i class="infoItems">Phone</i>
+                    <p>+86 18616809521</p>
+                    <span class="EditBtn">Edit</span>
+                </div>
+                <div class="editBox">
+                    <i class="editBoxArrow"></i>
+                    <h6></h6>
+                    <ul>
+                        <li>
+                            <span>Phone</span>
+                            <div><input type="text"/></div>
+                        </li>
+                    </ul>
+                    <div class="btn">
+                        <div>
+                            <span>Cancel</span>
+                            <span>Save</span>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+
+
+
+
+        </div>
+    </div>
+</div>
+
+<div class="footer">Copyright 2011-2017 Shanghai Big Data Inc.All Rights Reserved</div>
+
+
+
+</body>
+</html>
+<script>
+    //-----------------------------------------编辑框
+$(".info01 .EditBtn").click(function(){
+    if($(this).hasClass("showEditBox")){
+        closeEditBox();
+    }else{  //当前的出现
+        closeEditBox();
+        $(this).parents(".list").find(".editBox").slideDown(function(){
+            $(".infoList").outerHeight($(".infoWrap").outerHeight());
+        });
+        $(this).css("background","url('images/allStateArrow.png') no-repeat right center");
+        $(this).addClass("showEditBox");
+
+    }
+});
+
+    $(".btn span:first-of-type").click(function(){
+        closeEditBox();
+    });
+    function closeEditBox(){  //关闭编辑框
+        $(".editBox").slideUp(function(){
+            $(".infoList").outerHeight($(".infoWrap").outerHeight());
+        });
+        $(".info01 .EditBtn").css("background","url('images/monthArrow.png') no-repeat right center");
+        $(".EditBtn").removeClass("showEditBox");
+    }
+
+
+
+
+//*****************************************************city下拉选择
+    $("#city").find("input").keyup(function(){
+        var $this01=$(this);
+        if($this01.val()=="a"){
+            $(".city").show();
+            $("#city").find("li").click(function(){
+                $this01.val($(this).html());
+                $(".city").hide();
+            });
+
+            $(document).click(function(ev){
+                ev=ev||evevt;
+                var oElm=ev.target||ev.srcElement;       //判断点的是哪个对象
+                if(oElm.className!="city01"){    //如果这个的标签名是UL或者id名师"title",出弹框 标签名一定要全部大写,加引号
+                    $(".city").hide();
+                }
+            })
+        }
+    });
+
+
+    //*****************************************************country下拉选择
+    $("#Country").find("input").keyup(function(){
+        var $this01=$(this);
+        if($this01.val()=="b"){
+            $(".Country").show();
+            $("#Country").find("li").click(function(){
+                $this01.val($(this).html());
+                $(".Country").hide();
+            });
+
+            $(document).click(function(ev){
+                ev=ev||evevt;
+                var oElm=ev.target||ev.srcElement;       //判断点的是哪个对象
+                if(oElm.className!="city02"){    //如果这个的标签名是UL或者id名师"title",出弹框 标签名一定要全部大写,加引号
+                    $(".Country").hide();
+                }
+            })
+        }
+    });
+
+
+</script>
+

@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="css/index.css"/>
+    <script src="js/jquery-1.8.3.min.js"></script>
+    <script src="js/registration.js"></script>
+</head>
+
+<body>
+<div class="header">
+    <div class="header_left">
+        <span><img src="images/logo.png" alt=""> <i>for windows</i></span>
+    </div>
+    <div class="header_right">
+
+        <div class="login">
+            <span></span>
+            <span id="login">Login</span>
+        </div>
+    </div>
+    <div class="loginBox clearfix">
+        <span class="Indicating"></span>
+        <p>Have an account?</p>
+        <div class="email02">
+            <input class="inputText" type="text" placeholder="Email"/>
+            <a>×</a>
+        </div>
+        <input class="inputText" type="text" placeholder="Password"/>
+        <div>
+            <label class="checkbox"><input type="checkbox"/><i></i><span>Remember me</span></label>
+            <span class="forget">Forgot password?</span>
+        </div>
+
+        <input class="button" type="button" value="Login In"/>
+        <p>New to CBD ?</p>
+        <input class="button" type="button" value="Sign up"/>
+    </div>
+</div>
+
+<div class="wrap shoppingWrap" style="width: 988px;margin: 0 auto 152px;">
+   <div class="progress clearfix">
+       <ul class="clearfix">
+           <i></i>
+           <i></i>
+           <li class="progressActive"><span>1</span><br/>Your cart</li>
+           <li  class="progressActive"><span><img src="images/process.png" alt=""/></span><br/>Review your order</li>
+           <li><span>3</span><br/>Order complete</li>
+       </ul>
+   </div>
+   <p class="tipTil">Check your information</p>
+    <p class="tipCont">You can request a copy of your credit report from the reporting agencies to check your information. </p>
+    <div class="PaymentDetails">
+        <h6>Payment details</h6>
+        <!--需要在右侧显示姓名，电话等信息，加class="PaymentDetailsL"，不需要显示去掉class="PaymentDetailsL"-->
+        <p>Payment option:</p>
+        <p>Wire transfer</p>
+        <p>Use your bank account to submit your payment. Please note that your product cannot be delivered until payment is received in full.</p>
+
+    </div>
+
+    <div class="PaymentDetails PaymentInfo" style="margin-top: 13px;">
+        <h6>Wire transfer</h6>
+        <p><span>Name:</span> sdsdsf</p>
+        <p><span>Tel:</span> 3542312345</p>
+        <p><span>Addres:</span> bgjdasfdsfsd</p>
+    </div>
+
+
+    <div class="product02">
+        <table>
+            <thead>
+            <tr>
+                <th></th>
+                <th>Product Name</th>
+                <th>Unit Price</th>
+                <th>Qty</th>
+                <th>Price</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td><img src="images/product.png" alt=""></td>
+                <td>CBD Terminal For windows (1 year) </td>
+                <td>$199.99</td>
+                <td>1</td>
+                <td id="price">$<i>100</i><br/><span>(1year)</span></td>
+            </tr>
+            </tbody>
+        </table>
+        <p class="total03">Total:$<span id="amount">0</span></p>
+    </div>
+
+    <div class="Confirm">
+        <h6>Confirm subscription</h6>
+        <p>By submitting this order you agree that you are signing up for a subscription product that will be billed in regular intervals. Continued use of the purchased product is contingent upon your payment of the subscription. Details about the price and frequency of the billing were shown to you in the shopping cart above.
+            By submitting this order you agree to the Terms & Conditions and Privacy Policy of cleverbridge and confirm that you have read and understood your Right of Revocation as a consumer.
+            <br/>Your order will only be saved and processed after clicking the button below.</p>
+    </div>
+    <div class="buyBtn" onclick="javascript:window.location.href='processed.html'">Buy now</div>
+</div>
+
+<div class="footer02 clearfix">
+    <div class="inner">
+        <img src="images/footerLogo.png" alt=""/>
+        <div class="footerMid">
+            <span>Home</span>
+            <span>About us</span>
+            <span>Bigdata home</span>
+            <p>© 2017  Copyright 2011~2017 Shanghai Big Data Inc. All Rights Reserved</p>
+        </div>
+        <div class="area">700 B2  700th YishanRoad, Xuhui, Shanghai, China</div>
+    </div>
+</div>
+
+</body>
+</html>
+<script>
+    var num=0;
+    $("#add").click(function(){
+        num++;
+        $(".num").text(num);
+        $("#amount").text(num*$("#price i").html());
+    });
+    $("#minus").click(function(){
+        num--;
+        if(num<=0){
+            $(".num").text(0);
+            num=0;
+            $("#amount").text(0)
+        }
+        $(".num").text(num);
+        $("#amount").text(num*$("#price i").html());
+    });
+
+
+
+</script>

@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="css/index.css"/>
+    <script src="js/jquery-1.8.3.min.js"></script>
+    <script src="js/registration.js"></script>
+    <style>
+    .infoWrap{
+        padding-bottom: 80px;
+    }
+    .orderTil th {
+        font-size: 12px;
+    }
+</style>
+</head>
+
+<body>
+<div class="header">
+    <div class="header_left">
+        <span><img src="images/logo.png" alt=""/></span>
+    </div>
+    <div class="header_right">
+        <div class="login">
+            <span>Have an account?</span>
+            <span id="login">Login</span>
+        </div>
+    </div>
+    <div class="loginBox clearfix">
+        <span class="Indicating"></span>
+        <p>Have an account?</p>
+        <div class="email02">
+            <input class="inputText" type="text" placeholder="Email"/>
+            <a>×</a>
+        </div>
+        <input class="inputText" type="text" placeholder="Password"/>
+        <div>
+            <label class="checkbox"><input type="checkbox"/><i></i><span>Remember me</span></label>
+            <span class="forget">Forgot password?</span>
+        </div>
+
+        <input class="button" type="button" value="Login In"/>
+        <p>New to CBD ?</p>
+        <input class="button" type="button" value="Sign up"/>
+    </div>
+</div>
+
+<div class="wrapper clearfix">
+    <div class="infoList">
+        <div class="userInfo">
+            <div><img src="images/userImg.png" alt=""/></div> <br/>
+            登录名 <br/><span>Justbeing</span>
+        </div>
+        <div class="navLeft">
+            <ul>
+                <li onclick="javascript:window.location.href='userInfo.html'">userinfo</li>
+                <li onclick="javascript:window.location.href='userheader.html'" >用户头像</li>
+                <li onclick="javascript:window.location.href='orderList.html'"  class="active">我的订单</li>
+                <li class="hasUl">
+                    账户安全 <img src="images/navArrow.png" alt=""/>
+                    <ul>
+                        <li onclick="javascript:window.location.href='passwordReset01.html'" >重置密码</li>
+                    </ul>
+                </li>
+
+            </ul>
+        </div>
+    </div>
+    <div class="infoWrap">
+
+        <table>
+            <thead>
+            <tr  class="orderTil">
+                <th>订单信息</th>
+                <th>支付方式</th>
+                <th>订单金额</th>
+                <th>实付金额</th>
+                <th style="width: 110px;" class="latelyThreeMonth">
+                    <div id="latelyThreeMonth" style="width:130px;">
+                        <span class="latelyThreeMonthArrow">Last three months</span>
+                        <ul>
+                            <li>最近三个月</li>
+                            <li>最近一个月</li>
+                            <li>今天</li>
+                        </ul>
+                    </div>
+
+                </th>
+                <th style="width: 93px;padding-left: 7px;"  class="latelyThreeMonth">
+                    <div id="allState">
+                        <span class="allStateArrow">全部状态</span>
+                        <ul>
+                            <li>全部状态</li>
+                            <li>已完成</li>
+                            <li>未完成</li>
+                        </ul>
+                    </div>
+                </th>
+            </tr>
+            </thead>
+            <tbody>
+                <tr class="orderNum">
+                    <td colspan="6">订单编号：<span>256849958965</span></td>
+                </tr>
+                <tr class="orderInfo">
+                    <td style="width: 148px;">Premium membership 1 year</td>
+                    <td>PayPal</td>
+                    <td>＄999.00</td>
+                    <td class="red">＄799.00</td>
+                    <td>2017-10-23<br/>13:43:01</td>
+                    <td>已完成</td>
+                </tr>
+            </tbody>
+            <tbody>
+            <tr class="orderNum">
+                <td colspan="6">订单编号：<span>256849958965</span></td>
+            </tr>
+            <tr class="orderInfo">
+                <td style="width: 148px;">Premium membership 1 year</td>
+                <td>PayPal</td>
+                <td>＄999.00</td>
+                <td class="red">＄799.00</td>
+                <td>2017-10-23<br/>13:43:01</td>
+                <td class="orange">未完成</td>
+            </tr>
+            </tbody>
+            <tbody>
+            <tr class="orderNum">
+                <td colspan="6">订单编号：<span>256849958965</span></td>
+            </tr>
+            <tr class="orderInfo">
+                <td style="width: 148px;">Premium membership 1 year</td>
+                <td>PayPal</td>
+                <td>＄999.00</td>
+                <td class="red">＄799.00</td>
+                <td>2017-10-23<br/>13:43:01</td>
+                <td>已完成</td>
+            </tr>
+            </tbody>
+            <tbody>
+            <tr class="orderNum">
+                <td colspan="6">订单编号：<span>256849958965</span></td>
+            </tr>
+            <tr class="orderInfo">
+                <td style="width: 180px;">Premium membership 1 year</td>
+                <td>PayPal</td>
+                <td>＄999.00</td>
+                <td class="red">＄799.00</td>
+                <td>2017-10-23<br/>13:43:01</td>
+                <td class="orange">未完成</td>
+            </tr>
+            </tbody>
+        </table>
+
+        <div class="page">
+            <ul class="clearfix">
+                <div id="pageBefore">＜</div>
+                <li>1</li>
+                <li class="pageActive">2</li>
+                <li>3</li>
+                <li>4</li>
+                <li>5</li>
+                <li>6</li>
+                <li>7</li>
+                <li>8</li>
+                <div class="ellipses">···</div>
+                <li>199</li>
+                <li>200</li>
+                <div id="pageAfter">＞</div>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<div class="footer">Copyright 2011-2017 Shanghai Big Data Inc.All Rights Reserved</div>
+
+
+
+</body>
+</html>
+<script>
+// -------------------------------------最近三个月下拉
+    $("#latelyThreeMonth ul li").click(function(){
+        $("#latelyThreeMonth span").html($(this).html());
+        $("#latelyThreeMonth ul").hide();
+        $("#latelyThreeMonth").css("border-color","#e0e0e1");
+
+    });
+
+// -------------------------------------全部状态下拉
+$("#allState ul li").click(function(){
+    $("#allState span").html($(this).html());
+    $("#allState ul").hide();
+    $("#allState").css("border-color","#e0e0e1");
+
+});
+
+    $(document).click(function(ev){
+        ev=ev||evevt;
+        var oElm=ev.target||ev.srcElement;
+        if(oElm.className=="latelyThreeMonthArrow"){   //最近三个月箭头
+            $("#latelyThreeMonth").css("border-color","#D0D0D0");  //边框
+            $("#latelyThreeMonth ul").show();  //ul出现
+            $("#latelyThreeMonth span").css("background-image"," url('images/allStateArrow.png')");
+            thirdUl();
+        }
+
+        else if(oElm.className=="allStateArrow"){   //全部状态箭头
+            $("#allState").css("border-color","#D0D0D0");
+            $("#allState span").css("background-image"," url('images/allStateArrow.png')");
+            $("#allState ul").show();
+            firstUl();
+        }
+        else{
+            firstUl();
+            thirdUl();
+        }
+    });
+
+    function firstUl(){
+        $("#latelyThreeMonth ul").hide();   //最近三个月隐藏
+        $("#latelyThreeMonth").css("border-color","#e0e0e1");
+        $("#latelyThreeMonth span").css("background-image"," url('images/monthArrow.png')");
+
+    }
+
+    function thirdUl(){
+        $("#allState ul").hide();   //全部状态隐藏
+        $("#allState").css("border-color","#e0e0e1");
+        $("#allState span").css("background-image"," url('images/monthArrow.png')");
+    }
+
+
+    $(".page li").click(function(){
+        $(this).addClass("pageActive").siblings().removeClass("pageActive")
+    })
+</script>
+

@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>贝格大数据</title>
+    <link rel="stylesheet" href="css/index.css"/>
+    <link rel="shortcut icon" type="image/x-icon" href="images/logo_16X16.ico"/>
+    <script src="js/jquery-1.8.3.min.js"></script>
+    <script src="js/registration.js"></script>
+    <script type="text/javascript" src="js/jQuery.rTabs.js"></script>
+
+</head>
+
+<style>
+    .bx-pager{
+        display: none;
+    }
+
+    h2 {
+
+        width: 400px;
+
+        margin: 0 auto 10px auto;
+
+        font-size: 18px;
+
+        font-family: "微软雅黑";
+
+        color: #333;
+
+    }
+
+    .tab {
+
+        line-height: 85px;
+        cursor: pointer;
+        /*width: 1116px;*/
+        margin: 0 auto;
+    }
+
+    .tab-nav {
+
+        width: 1116px;
+        margin: 0 auto;
+        border-bottom: 2px solid #efeff0;
+        overflow: hidden;
+
+    }
+
+    .tab-nav a {
+        float: left;
+        line-height: 85px;
+        text-align: center;
+        text-decoration: none;
+        color: #4e4e4e;
+        cursor: pointer;
+        margin: 0 30px;
+        border-bottom: 2px solid;
+        border-color: rgba(0,0,0,0);
+        font-size: 16px;
+
+    }
+
+    .tab-nav a.current {
+
+        color: #1461d5;
+        border-color: #1461d5;
+
+    }
+
+    .tab-con {
+
+        position: relative;
+
+        width: 1200px;
+        /*width: 1116px;*/
+
+        /*height:200px;*/
+        /*height:180px;*/
+        height: 250px;
+        overflow: hidden;
+
+        /*background: #80b600;*/
+        padding: 83px 0 150px 0;
+        /*background: url(images/bgbg.jpg) no-repeat center;*/
+        margin: 0 auto;
+
+    }
+
+    .tab-con-item {
+
+        display: none;
+
+        width: 1200px;
+
+        /*height: 180px;*/
+        height: 250px;
+        line-height: 180px;
+
+        text-align: center;
+
+        color: red;
+        /*overflow: hidden;*/
+        /*position: relative;*/
+        /*left: -30px;*/
+
+    }
+.arrowL{
+    position: absolute;
+    left:10px ;
+    top: 50%;
+    width: 40px;
+    height: 35px;
+    background: url("images/controls.png") no-repeat left top;
+    cursor: pointer;
+
+}
+    .arrowR{
+        position: absolute;
+        right:10px ;
+        top: 50%;
+        width: 40px;
+        height: 35px;
+        background: url("images/controls.png") no-repeat -40px top;
+        cursor: pointer;
+    }
+    /*20171127*/
+    .tab-con，.tab-con-item{
+        height: 250px;
+    }
+    #tabItem ul {
+        position: relative;
+        top: 73px;
+    }
+
+    #tabItem  .slider1{
+        /*left: 29px;*/
+    }
+.content{
+    width: 1116px;
+    overflow: hidden;
+    height: 320px;
+    margin: 0 auto;
+}
+    .bgbg02{
+        background: url("images/bgbg.jpg") no-repeat center 80px;
+
+    }
+    #tabItem .slider1 li{
+        box-shadow:none;
+    }
+
+.bgbg{
+    width: 1300px;
+    margin: 0 auto;
+    position: relative;
+}
+
+
+</style>
+
+<body style="overflow-x: hidden;">
+<div class="header">
+    <div class="header_left">
+        <span class="txt"><a href="#">About</a></span>
+        <b>|</b>
+        <span><a href="#">Products</a></span>
+    </div>
+    <div class="header_right">
+
+        <div class="login">
+            <span></span>
+            <!--id="login" -----未登录login按钮 // id="login02" 已登录头像按钮-->
+            <span id="login" style="display: none;">Login</span>
+            <span id="login02" class="userPic"></span>
+        </div>
+    </div>
+    <div class="loginBox clearfix" style="box-shadow:none;-webkit-box-shadow:none;">
+        <!--class="loginBoxCont01" -----未登录状态 // class="loginBoxCont02" 已登录状态-->
+        <div class="loginBoxCont01" style="display: none;">
+            <span class="Indicating"></span>
+            <p>Have an account?</p>
+            <div class="email02">
+                <input class="inputText" type="text" placeholder="Email"/>
+                <a>×</a>
+            </div>
+            <input class="inputText" type="text" placeholder="Password"/>
+            <div>
+                <label class="checkbox"><input type="checkbox"/><i></i><span>Remember me</span></label>
+                <span class="forget">Forgot password?</span>
+            </div>
+
+            <input class="button" type="button" value="Login In"/>
+            <p>New to CBD ?</p>
+            <input class="button" type="button" value="Sign up"/>
+        </div>
+        <div class="loginBoxCont02">
+            <span class="Indicating" style="right: 44px;"></span>
+            <ul class="settings">
+                <li>xxxx@qq.com</li>
+                <li>Profile</li>
+                <li>Order</li>
+                <li>Logout</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<div class="banner" style="background: #0060e3 url(images/bannerBg02.png) no-repeat center bottom;">
+    <div class="bannerCont" style="top: 50%;margin-top: -207px;">
+        <img src="images/bigdataLogo.png" alt=""/>
+        <p style="line-height: 24px;width: 722px;position: absolute;left: 50%;margin-left: -361px;">Big Data Services Co., Ltd. has been a pioneer in financial data services since 2011. As a leading data service provider, Big Data devotes to offer professional technology services. Big Data targeted securities companies and media as clients in early years, and developed businesses to charity and juridical, etc. in recent years. Services including data collection, data analysis, IT product development are among the services list of Big Data.
+        </p>
+
+    </div>
+</div>
+
+<div>
+    <div class="item01">
+        <h6>PRODUCT</h6>
+
+        <div class="tab" id="tab2">
+
+            <div class="tab-nav j-tab-nav">
+
+                    <a style="margin-left: 156px;" href="javascript:void(0);" class="current">Financial database</a>
+
+                    <a href="javascript:void(0);">Big Data End product</a>
+
+                    <a href="javascript:void(0);">Financial data products</a>
+
+                    <a href="javascript:void(0);">Investment research</a>
+
+
+
+            </div>
+
+            <div class="bgbg bgbg02">
+            <!--<div style="background: url(images/bgbg.jpg) no-repeat center;">-->
+                <div class="tab-con">
+
+                    <div class="j-tab-con"  id="tabItem">
+
+                        <div class="tab-con-item" style="display:block;">
+                            <div class="content">
+                                <ul class="slider1">
+                                    <li><img src="images/ICON/金融数据库/icon01.png" alt=""/><p>111111News event library</p> </li>
+                                    <li><img src="images/ICON/金融数据库/icon02.png" alt=""/><p>222News event library</p> </li>
+                                    <li><img src="images/ICON/金融数据库/icon03.png" alt=""/><p>333Research Report Library</p> </li>
+                                    <li><img src="images/ICON/金融数据库/icon04.png" alt=""/><p>444News library</p> </li>
+                                    <li><img src="images/ICON/金融数据库/icon05.png" alt=""/><p>555News library</p> </li>
+                                    <li><img src="images/ICON/金融数据库/icon06.png" alt=""/><p>666News library</p> </li>
+                                    <li><img src="images/ICON/金融数据库/icon07.png" alt=""/><p>777News library</p> </li>
+                                </ul>
+                            </div>
+
+
+                        </div>
+
+                        <div class="tab-con-item">
+
+                            <ul>
+                                <li><img src="images/ICON/贝格终端产品/icon01.png" alt=""/><p>22222News event library</p> </li>
+                                <li><img src="images/ICON/贝格终端产品/icon02.png" alt=""/><p>News event library</p> </li>
+                                <li><img src="images/ICON/贝格终端产品/icon03.png" alt=""/><p>Research Report Library</p> </li>
+                            </ul>
+                        </div>
+
+                        <div class="tab-con-item">
+
+                            <ul>
+                                <li><img src="images/ICON/金融数据产品/icon01.png" alt=""/><p>33333News event library</p> </li>
+                                <li><img src="images/ICON/金融数据产品/icon02.png" alt=""/><p>News event library</p> </li>
+                            </ul>
+                        </div>
+
+                        <div class="tab-con-item">
+
+                            <ul>
+                                <li><img src="images/ICON/投资研究/icon01.png" alt=""/><p>4444News event library</p> </li>
+                                <li><img src="images/ICON/投资研究/icon02.png" alt=""/><p>News event library</p> </li>
+
+
+
+                            </ul>
+
+
+                        </div>
+
+
+                    </div>
+
+                </div>
+                <span class="arrowL"></span>
+                <span class="arrowR"></span>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<div class="distribution item01">
+    <div class="inner" style="width: 1116px;">
+        <h6 style="color: #fff;">Service survey service distribution</h6>
+        <ul>
+            <li>
+                <img src="images/disIcon_01.png" alt=""/>
+                <p>Professional</p>
+                <p>Big Data is an enterprise-class information provider. We dedicate to offer effective solutions for enterprises and business experts.</p>
+            </li>
+            <li>
+                <img src="images/disIcon_02.png" alt=""/>
+                <p>Reliablel</p>
+                <p>Big Data is supported by a leading financial media China Business Network. With exclusive information in financial industry, Big Data shall be of great help for decision makers.</p>
+            </li>
+            <li>
+                <img src="images/disIcon_03.png" alt=""/>
+                <p>Network</p>
+                <p>Big Data Services Co., Ltd. headquarters in Shanghai, and has branch agencies in Beijing, Hong Kong, Shenzhen, Guiyang, Haikou, etc. The number of employees is 700 up to November 2017.</p>
+            </li>
+        </ul>
+    </div>
+</div>
+
+<div class="item01">
+    <h6>MANAGER</h6>
+    <div class="Manager clearfix inner">
+        <div class="ManagerL"><img src="images/manager.png" alt=""/></div>
+        <div class="ManagerR">
+            <span></span> <br/>
+            <span>Chairman  <i>Changqing Li</i></span>
+            <p>Founder and Chairman of Big Data Service Co., Ltd., is a pioneer of data technology in China. Changqing began his career in a leading domestic data company and has committed to data application in financial industry for almost two decades.</p>
+            <p>He served as Manager of Terminal Department to take charge of terminal product development of Juyuan Data Co., Ltd. between 2002 and 2008. He then became Chief Architect of GAO Time Co., Ltd. and led a number of data center projects serving financial market.</p>
+            <p>In October 2011, Changqing established Big Data Co., Ltd. in Shanghai and became chairman of the company. He is a member of the board of directors as well.</p>
+        </div>
+    </div>
+</div>
+
+<div class="item01">
+    <h6>OUR PARTNER</h6>
+    <div class="OurPartner clearfix inner">
+        <ul>
+            <li><img src="images/customerLogo/zhaoshang.jpg" alt=""/></li>
+            <li><img src="images/customerLogo/guodu.jpg" alt=""/></li>
+            <li><img src="images/customerLogo/guangfa.jpg" alt=""/></li>
+            <li><img src="images/customerLogo/guodu.jpg" alt=""/></li>
+            <li><img src="images/customerLogo/guotai.jpg" alt=""/></li>
+            <li><img src="images/customerLogo/fuxing.jpg" alt=""/></li>
+            <li><img src="images/customerLogo/dongxing.jpg" alt=""/></li>
+            <li><img src="images/customerLogo/fenghuang.jpg" alt=""/></li>
+            <li><img src="images/customerLogo/xhs.jpg" alt=""/></li>
+            <li><img src="images/customerLogo/pinganzhengquan.jpg" alt=""/></li>
+            <li><img src="images/customerLogo/zhongyuan.jpg" alt=""/></li>
+            <li><img src="images/customerLogo/tianfeng.jpg" alt=""/></li>
+            <li><img src="images/customerLogo/zhongxin.jpg" alt=""/></li>
+            <li><img src="images/customerLogo/guangfa.jpg" alt=""/></li>
+            <li><img src="images/customerLogo/anxin.jpg" alt=""/></li>
+        </ul>
+    </div>
+</div>
+
+<div class="footer02 clearfix">
+    <div class="inner">
+        <img style="margin: 20px 56px 0 3px;" src="images/bigdataLogo002.png" alt=""/>
+        <div class="footerMid">
+            <ul>
+                <li>Home</li>
+                <li>About us</li>
+                <li>Advantages</li>
+                <li>Preview</li>
+                <li>Video</li>
+            </ul>
+            <ul>
+                <li>Bigdata home</li>
+                <li>Bigdata home</li>
+                <li>Support</li>
+                <li>Chrom Extension</li>
+            </ul>
+        </div>
+        <div class="area" style="background: none;padding-top: 16px;">
+            700 B2  700th YishanRoad, Xuhui, Shanghai, China <img style="float: inherit;position: relative;top: -7px;" src="images/footerIcon.png" alt=""/><br/>
+            <span style="display: inline-block;color:#c9e1f9;font-size: 12px;font-family:RobotoLight;">
+            ©2017 Copyright 2011-2017 Shanghai Big Data Inc.All Rights Reserved
+            </span>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
+<script>
+
+
+
+    //**************************************************************
+    $(document).ready(function(){
+
+        $(function() {
+            $("#tab2").rTabs({
+                bind : 'click',
+                animation : 'left'
+            });
+
+        });
+
+
+
+
+        $(".tab-con-item").each(function(){
+            var len=$(this).find("li").length;
+            var wid=len*258+27*(len-1);
+			var wid02=len*258+27*len;
+            if($(this).index()!=0){
+                $(this).find("ul").width(wid);
+                $(this).find("ul").css({"position":"absolute","left":"50%","transform":"translateX(-50%)"});
+                $(this).css("position","relative")
+            }else{
+                $(this).find("ul").width(wid02);
+            }
+        })
+
+    });
+
+
+    //************************************************左右箭头点击效果
+    $(".arrowL").hide();
+    var ulLeft=$(".slider1 li").eq(0).width()*3+27*3;
+    console.log(ulLeft)
+    $(".arrowR").click(function(){
+        $(".slider1").animate({"left":-ulLeft});
+        $(".arrowR").fadeOut();
+        $(".arrowL").fadeIn();
+
+    });
+    $(".arrowL").click(function(){
+        $(".slider1").animate({"left":0});
+        $(".arrowL").fadeOut();
+        $(".arrowR").fadeIn();
+    })
+
+</script>

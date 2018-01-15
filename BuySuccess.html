@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>贝格大数据</title>
+    <link rel="stylesheet" href="css/index.css"/>
+    <link rel="shortcut icon" type="image/x-icon" href="images/cbdLogo.ico"/>
+    <script src="js/jquery-1.8.3.min.js"></script>
+    <script src="js/registration.js"></script>
+</head>
+
+<body>
+<div class="header">
+    <div class="header_left">
+        <span><img src="images/logo.png" alt=""> <i>for windows</i></span>
+    </div>
+    <div class="header_right">
+
+        <div class="login">
+            <span></span>
+            <span id="login">Login</span>
+        </div>
+    </div>
+    <div class="loginBox clearfix">
+        <span class="Indicating"></span>
+        <p>Have an account?</p>
+        <div class="email02">
+            <input class="inputText" type="text" placeholder="Email"/>
+            <a>×</a>
+        </div>
+        <input class="inputText" type="text" placeholder="Password"/>
+        <div>
+            <label class="checkbox"><input type="checkbox"/><i></i><span>Remember me</span></label>
+            <span class="forget">Forgot password?</span>
+        </div>
+
+        <input class="button" type="button" value="Login In"/>
+        <p>New to CBD ?</p>
+        <input class="button" type="button" value="Sign up"/>
+    </div>
+</div>
+
+<div class="wrap shoppingWrap" style="width: 988px;margin: 0 auto 60px;">
+   <div class="progress clearfix">
+       <ul class="clearfix">
+           <i></i>
+           <i></i>
+           <li class="progressActive"><span>1</span><br/>Your cart</li>
+           <li class="progressActive"><span>2</span><br/>Review your order</li>
+           <li class="progressActive"><span><img src="images/process.png" alt=""/></span><br/>Order complete</li>
+       </ul>
+   </div>
+    <p class="tipTil">Please submit your payment now</p>
+    <p class="tipCont">A confirmation email has been sent to zjcj@dd.com <br/>
+        If you did not receive an email from us, please check your spam, bulk or junk mail folders.
+    </p>
+    <div class="successfulPages">
+        <h6>cleverbridge reference number</h6>
+        <div>121991332</div>
+        <p>To ensure the most prompt and efficient service, please always refer to your reference number when you contact us.de </p>
+    </div>
+    <div class="successfulPages">
+        <h6>How to submit your payment by wire transfer</h6>
+        <p style="width: 710px;text-align: left;padding-left: 139px;padding-bottom: 25px;">Please understand that we cannot deliver your product until payment is received. It is not necessary to inform us of your completed bank transfer. Once your payment has been received, we will automatically send you an email with all details regarding your order.
+            Other payment options may allow you to receive your product sooner. You can change your payment option below.
+        </p>
+    </div>
+    <div class="successfulPages">
+        <h6>Bank account details</h6>
+        <div class="bankAccount">
+            <p><span>Account holder:</span><span>cleverbridge AG</span></p>
+            <p><span>Bank name:</span><span>Deutsche Bank</span></p>
+            <p><span>IBAN:</span><span>DE83370700600207164500</span></p>
+            <p><span>BIC (SWIFT):</span><span>DEUTDEDKXXX</span></p>
+            <p><span>Account number:</span><span>2071645</span></p>
+            <p><span>Bank identifier code:</span><span>37070060</span></p>
+            <p><span>Bank address:</span><span>An den Dominikanern 11-27 - 50668 Cologne - Germany</span></p>
+            <p><span>Reason for transfer:</span><span>121991332</span></p>
+        </div>
+        <div class="PaymentInformation">
+            <p>Payment information</p>
+            <p>Please indicate your reference number 121991332 as reason for transfer.</p>
+            <p>For international wire transfers, we highly recommend using the IBAN and BIC. <br/>
+                Please note: International transfer fees may apply. You are responsible for all fees involved. Please contact your bank for assistance in calculating these, or your transfer
+                may arrive incomplete and your order may not be delivered.   </p>
+            <p>Processing international wire transfers may take up to 5 to 10 business days.</p>
+        </div>
+
+    </div>
+    <div class="successfulPages">
+        <h6>Your purchase documents</h6>
+        <p style="width: 710px;text-align: left;padding-left: 139px;padding-bottom: 25px;">Adobe Acrobat Reader is needed to open this PDF file. If this software is not yet installed on your computer, please download a free version here.
+            <br/>
+            10/17/2017 - Order confirmation
+        </p>
+    </div>
+    <div class="successfulPages">
+        <h6>Change payment option</h6>
+        <p style="width: 710px;text-align: left;padding-left: 139px;padding-bottom: 10px;">Please click below if you would like to choose a different payment option on our secure website. Other payment options, such as credit card, may allow you to receive your product sooner.
+        </p>
+        <span class="ChangePaymentOption">Change payment option</span>
+    </div>
+    <div class="successfulPages">
+        <h6>Support information</h6>
+        <p style="width: 710px;text-align: left;padding-left: 389px;padding-bottom: 10px;">Payment & order support <br/>
+            Have any payment or order-related questions?<br/>
+            Find answers at:<br/>
+        <span style="color: #0060e3;padding-top: 7px;">cleverbridge Customer Support</span>
+        </p>
+
+    </div>
+</div>
+
+<div class="footer02 clearfix">
+    <div class="inner">
+        <img src="images/footerLogo.png" alt=""/>
+        <div class="footerMid">
+            <span>Home</span>
+            <span>About us</span>
+            <span>Bigdata home</span>
+            <p>© 2017  Copyright 2011~2017 Shanghai Big Data Inc. All Rights Reserved</p>
+        </div>
+        <div class="area">700 B2  700th YishanRoad, Xuhui, Shanghai, China</div>
+    </div>
+</div>
+
+</body>
+</html>
+<script>
+    var num=0;
+    $("#add").click(function(){
+        num++;
+        $(".num").text(num);
+        $("#amount").text(num*$("#price i").html());
+    });
+    $("#minus").click(function(){
+        num--;
+        if(num<=0){
+            $(".num").text(0);
+            num=0;
+            $("#amount").text(0)
+        }
+        $(".num").text(num);
+        $("#amount").text(num*$("#price i").html());
+    });
+
+
+
+</script>

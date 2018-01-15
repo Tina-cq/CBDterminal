@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="css/index.css"/>
+    <link rel="stylesheet" href="css/bootstrap.min.css"/>
+    <script src="js/jquery-1.8.3.min.js"></script>
+    <script src="js/registration.js"></script>
+</head>
+
+<body>
+<div class="header">
+    <div class="header_left">
+        <span><img src="images/logo.png" alt=""/></span>
+    </div>
+    <div class="header_right">
+        <div class="login">
+            <span>Have an account?</span>
+            <span id="login">Login</span>
+        </div>
+    </div>
+    <div class="loginBox clearfix">
+        <span class="Indicating"></span>
+        <p>Have an account?</p>
+        <div class="email02">
+            <input class="inputText" type="text" placeholder="Email"/>
+            <a>×</a>
+        </div>
+        <input class="inputText" type="text" placeholder="Password"/>
+        <div>
+            <label class="checkbox"><input type="checkbox"/><i></i><span>Remember me</span></label>
+            <span class="forget">Forgot password?</span>
+        </div>
+
+        <input class="button" type="button" value="Login In"/>
+        <p>New to CBD ?</p>
+        <input class="button" type="button" value="Sign up"/>
+    </div>
+</div>
+
+<div class="wrapper clearfix">
+    <div class="infoList">
+        <div class="userInfo">
+            <div><img src="images/userImg.png" alt=""/></div> <br/>
+            登录名 <br/><span>Justbeing</span>
+        </div>
+        <div class="navLeft">
+            <ul>
+                <li onclick="javascript:window.location.href='userInfo.html'">userinfo</li>
+                <li onclick="javascript:window.location.href='userheader.html'"  class="active">用户头像</li>
+                <li onclick="javascript:window.location.href='orderList.html'" >我的订单</li>
+                <li class="hasUl">
+                    账户安全 <img src="images/navArrow.png" alt=""/>
+                    <ul>
+                        <li onclick="javascript:window.location.href='passwordReset01.html'" >重置密码</li>
+                    </ul>
+                </li>
+
+            </ul>
+        </div>
+    </div>
+    <div class="infoWrap">
+        <div class="userHeaderInner">
+            <h6><span>用户头像</span></h6>
+            <p class="support">仅支持JPG,GIF,PNG,且文件小于1M</p>
+            <div class="upload">上传本地照片<input type="file"/></div>
+
+            <div class="clearfix" style="margin-bottom: 41px;">
+                <div class="uploadImgSizeL"><img src="images/userHeader.png" alt=""/></div>
+                <div class="uploadImgSizeR">
+                    <p>你上传的图片将会总动生成你的头像，请注<br/>意小尺寸图像小的尺寸头像是否清晰。</p>
+                    <div class="midSize">
+                        <span></span>
+                        <p>中尺寸头像<br/>100X100像素<br/>（自动生成）</p>
+                    </div>
+                    <div class="midSize litterSize">
+                        <span></span>
+                        <p>中尺寸头像<br/>50X50像素<br/>（自动生成）</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="btn">
+                <!--<span>修改</span>-->
+                <span style="float: right;">保存</span>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<div class="footer">Copyright 2011-2017 Shanghai Big Data Inc.All Rights Reserved</div>
+
+
+
+</body>
+</html>
+<script>
+
+</script>
+

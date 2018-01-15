@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="css/index.css"/>
+    <link rel="shortcut icon" type="image/x-icon" href="images/cbdLogo.ico"/>
+    <script src="js/jquery-1.8.3.min.js"></script>
+    <script src="js/registration.js"></script>
+</head>
+
+<body>
+<div class="header">
+    <div class="header_left">
+        <span><img src="images/logo.png" alt=""> <i>for windows</i></span>
+    </div>
+    <div class="header_right">
+
+        <div class="login">
+            <span></span>
+            <span id="login">Login</span>
+        </div>
+    </div>
+    <div class="loginBox clearfix">
+        <span class="Indicating"></span>
+        <p>Have an account?</p>
+        <div class="email02">
+            <input class="inputText" type="text" placeholder="Email"/>
+            <a>×</a>
+        </div>
+        <input class="inputText" type="text" placeholder="Password"/>
+        <div>
+            <label class="checkbox"><input type="checkbox"/><i></i><span>Remember me</span></label>
+            <span class="forget">Forgot password?</span>
+        </div>
+
+        <input class="button" type="button" value="Login In"/>
+        <p>New to CBD ?</p>
+        <input class="button" type="button" value="Sign up"/>
+    </div>
+</div>
+
+<div class="choose clearfix inner wrap">
+    <img src="images/computer.jpg" alt=""/>
+    <div class="chooseEdition">
+        <h6>Choose  Your Edition</h6>
+        <span class="tipchoose" >warning!warning!</span>
+        <div id="chooseBuy">Parallesls Desktop Pro Edition <br/>For Developers,Testers and Power Users  $99.99/yr</div>
+        <p class="Buy01">Buy now</p>
+        <p class="Buy02" onclick="javascript:window.location.href='shoppingCar.html'">Buy Now $99.99/yr</p>
+    </div>
+</div>
+
+<div class="footer02 clearfix">
+    <div class="inner">
+        <img src="images/footerLogo.png" alt=""/>
+        <div class="footerMid">
+            <span>Home</span>
+            <span>About us</span>
+            <span>Bigdata home</span>
+            <p>© 2017  Copyright 2011~2017 Shanghai Big Data Inc. All Rights Reserved</p>
+        </div>
+        <div class="area">700 B2  700th YishanRoad, Xuhui, Shanghai, China</div>
+    </div>
+</div>
+
+</body>
+</html>
+<script>
+    //--------------------------------------判断footer的位置
+    var screenH=document.documentElement.clientHeight;
+    var midH=screenH-$(".header").outerHeight()-$(".footer02").outerHeight();
+
+    if(midH>$(".wrap").outerHeight()){
+        var difference=(midH-$(".wrap").outerHeight())/2 + "px";
+        $(".wrap").css("padding",difference+" 0");
+
+    }else{
+        $(".wrap").css("padding","60px 0")
+    }
+
+    $(".Buy02").hide();
+    $("#chooseBuy").click(function(){
+        $(".tipchoose").hide();
+        $("#chooseBuy").addClass("chooseBuy");
+        $(".Buy02").show();
+        $(".Buy01").hide();
+    });
+
+    $(".Buy01").click(function(){
+        $(".tipchoose").show()
+    })
+</script>

@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="css/index.css"/>
+    <script src="js/jquery-1.8.3.min.js"></script>
+    <script src="js/registration.js"></script>
+</head>
+<style>
+    .footer02{
+        /*position: fixed;*/
+        bottom: 0;
+        width: 100%;
+    }
+
+</style>
+<body>
+<div class="header">
+    <div class="header_left">
+        <span><img src="images/logo.png" alt=""> <i>for windows</i></span>
+    </div>
+    <div class="header_right">
+
+        <div class="login">
+            <span></span>
+            <span id="login">Login</span>
+        </div>
+    </div>
+    <div class="loginBox clearfix">
+        <span class="Indicating"></span>
+        <p>Have an account?</p>
+        <div class="email02">
+            <input class="inputText" type="text" placeholder="Email"/>
+            <a>×</a>
+        </div>
+        <input class="inputText" type="text" placeholder="Password"/>
+        <div>
+            <label class="checkbox"><input type="checkbox"/><i></i><span>Remember me</span></label>
+            <span class="forget">Forgot password?</span>
+        </div>
+
+        <input class="button" type="button" value="Login In"/>
+        <p>New to CBD ?</p>
+        <input class="button" type="button" value="Sign up"/>
+    </div>
+</div>
+
+<div class="wrap shoppingWrap" style="width: 988px;margin: 0 auto;">
+   <div class="progress clearfix">
+       <ul class="clearfix">
+           <i></i>
+           <i></i>
+           <li class="progressActive"><span>1</span><br/>Your cart</li>
+           <li><span>2</span><br/>Review your order</li>
+           <li><span>3</span><br/>Order complete</li>
+       </ul>
+   </div>
+    <div class="clearfix">
+    <div class="product">
+        <table>
+            <thead>
+            <tr>
+                <th></th>
+                <th>Product Name</th>
+                <th>Unit Price</th>
+                <th>Qty</th>
+                <th>Price</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td><img src="images/product.png" alt=""/></td>
+                <td>CBD Terminal For windows (1 year) </td>
+                <td id="price">$<i>100</i></td>
+                <td><div class="buyNum"><span class="num"><input type="text" value="0"/></span><span class="add"><i id="add"></i><i id="minus"></i></span></div></td>
+                <td>$<i id="amount">0</i></td>
+            </tr>
+            </tbody>
+        </table>
+        <p class="total">Total:$<span>0</span></p>
+    </div>
+    <div style="float: right;margin-top: 24px;">
+        <div class="payment">
+            <p>Payment method</p>
+            <div id="method"><span class="method">Paypal</span><span>Wire transfer</span></div>
+            <p class="method01">Submit your payment securely and reliably</p>
+            <div class="method01" style="display: none;">
+                <p>Use your bank account to submit your payment.Please note that your product cannot be delivered until payment is received in full.</p>
+                <ul class="WireTransfer clearfix">
+                    <li class="li"><input type="text"  value="First name" style="color:#ccc;" onfocus="if(value=='First name'){this.style.color='#8a8585';value=''}" onblur="if(value==''){this.style.color='#ccc';value='First name'}"></li>
+                    <li class="li"><input type="text"  value="Last name" style="color:#ccc;" onfocus="if(value=='Last name'){this.style.color='#8a8585';value=''}" onblur="if(value==''){this.style.color='#ccc';value='Last name'}"></li>
+                    <li class="li"><input type="text"  value="Phone" style="color:#ccc;" onfocus="if(value=='Phone'){this.style.color='#8a8585';value=''}" onblur="if(value==''){this.style.color='#ccc';value='Phone'}"></li>
+                    <li class="li" id="city" style="position: relative;">
+                        <input class="city01" type="text"  value="Switzerland" style="color:#ccc;" onfocus="if(value=='Switzerland'){this.style.color='#8a8585';value=''}" onblur="if(value==''){this.style.color='#ccc';value='Switzerland'}">
+                        <ul class="city">
+                            <li class="city01">a1</li>
+                            <li class="city01">a12</li>
+                            <li class="city01">a12</li>
+                            <li class="city01">a12</li>
+                            <li class="city01">a12</li>
+                            <li class="city01">a12</li>
+                            <li class="city01">a12</li>
+                            <li class="city01">a13</li>
+                        </ul>
+                    </li>
+
+                </ul>
+
+            </div>
+            </div>
+        <p class="total02">Total:$<span>99.99</span></p>
+        <div class="nextBtn" onclick="javascript:window.location.href='ReviewOrder.html'">Next</div>
+    </div>
+    </div>
+</div>
+
+<div class="footer02 clearfix">
+    <div class="inner">
+        <img src="images/footerLogo.png" alt=""/>
+        <div class="footerMid">
+            <span>Home</span>
+            <span>About us</span>
+            <span>Bigdata home</span>
+            <p>© 2017  Copyright 2011~2017 Shanghai Big Data Inc. All Rights Reserved</p>
+        </div>
+        <div class="area">700 B2  700th YishanRoad, Xuhui, Shanghai, China</div>
+    </div>
+</div>
+
+</body>
+</html>
+<script>
+    var num=0;
+    $("#add").click(function(){
+        num++;
+        $(".num input").val(num);
+        $("#amount").text((num*$("#price i").html()).toFixed(2));
+    });
+    $("#minus").click(function(){
+        num--;
+        if(num<=0){
+            $(".num input").val(0);
+            num=0;
+            $("#amount").text(0)
+        }
+        $(".num input").val(num);
+        $("#amount").text((num*$("#price i").html()).toFixed(2));
+    });
+
+    $(".num input").keyup(function(){
+        $("#amount").text((($(".num input").val())*$("#price i").html()).toFixed(2));
+        num=$(".num input").val();
+    });
+    //**************************************************
+    $("#method span").click(function(){
+        $(this).addClass("method").siblings().removeClass("method");
+        $(".method01").hide();
+        $(".method01").eq($(this).index()).show();
+
+        if($(this).index()==1){
+            if(screenH<701){
+                $(".footer02").css("position","inherit")
+            }else{
+                $(".footer02").css("position","fixed")
+            }
+        }else{
+            if(screenH<621){
+                $(".footer02").css("position","inherit")
+            }else{
+                $(".footer02").css("position","fixed")
+            }
+        }
+    });
+
+    //*****************************************************city下拉选择
+    $("#city").find("input").keyup(function(){
+        var $this01=$(this);
+        if($this01.val()=="a"){
+            $(".city").show();
+            $("#city").find("li").click(function(){
+                $this01.val($(this).html());
+                $(".city").hide();
+            });
+
+            $(document).click(function(ev){
+                ev=ev||evevt;
+                var oElm=ev.target||ev.srcElement;       //判断点的是哪个对象
+                if(oElm.className!="city01"){    //如果这个的标签名是UL或者id名师"title",出弹框 标签名一定要全部大写,加引号
+                    $(".city").hide();
+                }
+            })
+        }
+    });
+
+    //*************************************************
+    var screenH=document.documentElement.clientHeight;
+    console.log(screenH)
+    if(screenH<621){
+        $(".footer02").css("position","inherit")
+    }else{
+        $(".footer02").css("position","fixed")
+    }
+</script>
